@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
 
-const ProductLayout = ({children}: {children: React.ReactNode}) => {
+const ProductLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>{children}
     <div>
-        </div></div>
-  )
-}
+      {children}
+      <div>
+        <h2>Featured products section</h2>
+      </div>
+    </div>
+  );
+};
 
-export default ProductLayout
+export default ProductLayout;

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navigation from "./components/navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,11 +28,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header>
-          <p>Welcome to Next.JS 15 crash course</p>
+        <header className="bg-slate-900 text-white p-4 text-center">
+          {/* <p>Welcome to Next.JS 15 crash course</p> */}
+          <Navigation />
         </header>
         {children}
-        <footer>Ololade.</footer>
+        <footer className="bg-slate-900 text-white p-4 text-center">
+          Ololade.
+        </footer>
       </body>
     </html>
   );
